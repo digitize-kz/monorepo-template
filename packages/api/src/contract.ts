@@ -62,3 +62,5 @@ export const contract = c.router({
     metadata: { role: "guest" } as const,
   },
 });
+
+export default contract;

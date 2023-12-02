@@ -10,7 +10,7 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "clean": "git clean -xdf node_modules",
+    "clean": "git clean -xdf .turbo node_modules",
     "clean:workspaces": "turbo clean",
     "postinstall": "pnpm lint:ws",
     "db:push": "pnpm -F db push",

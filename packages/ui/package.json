@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint \"**/*.ts*\"",
-    "ui:add": "pnpm dlx shadcn-ui@latest add"
+    "ui:add": "pnpm dlx shadcn-ui@latest add",
+    "clean": "git clean -xdf dist .turbo node_modules *.tsbuildinfo"
   },
   "devDependencies": {
     "@types/node": "20.10.0",

@@ -21,7 +21,7 @@
     "skipLibCheck": true,
     "strict": true,
     "strictNullChecks": true,
-    "incremental": true,
+    "incremental": false,
     "noImplicitAny": true,
     "strictBindCallApply": true,
     "noFallthroughCasesInSwitch": true

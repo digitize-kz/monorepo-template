@@ -1,12 +1,12 @@
 import { initQueryClient } from "@ts-rest/react-query";
 import type { InitClientReturn } from "@ts-rest/react-query";
 
-import { contract } from "@taskbounty-app/api";
+import c from "@taskbounty-app/api";
 
 export const client: InitClientReturn<
-  typeof contract,
+  typeof c.contract,
   { baseUrl: string; baseHeaders: Record<string, string> }
-> = initQueryClient(contract, {
+> = initQueryClient(c.contract, {
   baseUrl: "http://localhost:3003",
   // TODO: add headers from clerk?
   baseHeaders: {},

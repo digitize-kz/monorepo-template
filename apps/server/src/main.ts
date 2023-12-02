@@ -22,6 +22,7 @@ async function bootstrap() {
     },
   );
   SwaggerModule.setup("docs", app, document);
+
   //                   ^ Path for swagger
   await app.listen(process.env.NEST_PORT || 4000);
 }

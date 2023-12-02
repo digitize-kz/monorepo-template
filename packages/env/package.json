@@ -6,7 +6,7 @@
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "tsc --project tsconfig.json",
-    "clean": "tsc --build --clean",
+    "clean": "git clean -xdf dist .turbo node_modules *.tsbuildinfo",
     "format": "prettier --check '**/*.{json,y?(a)ml,md}'",
     "format:fix": "pnpm run format --write",
     "lint": "eslint --ignore-path .gitignore --ext mjs,js,ts .",
@@ -16,7 +16,8 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "repository": {
     "type": "git",

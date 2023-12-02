@@ -1,26 +1,26 @@
 # Monorepo
-Made by https://www.tomray.dev/nestjs-nextjs-trpc#monorepo-config-updates-and-dx-tips
-# Documentation
-TODO:
-- [ ] OpenAPI integraion
-- [x] API integration
-    - [x] Front
-    - [x] Back
-- [x] Turbo test
-- [x] Tsconfig fix
-- [x] Dotenv
-- [ ] Deploy
-- [] JSON query params for front and back https://ts-rest.com/docs/next#json-query-parameters 
-- [ ] Update all packages
-- [ ] Clerk integrations
-- [ ] Github actions CI/CD
 
-- [ ] refactor Next to FSD filesystem
-- [ ] refactor Nest
-    - [ ] Multi-handler?
+## Thanks
+Inspired by [tomray.dev](https://www.tomray.dev/nestjs-nextjs-trpc#monorepo-config-updates-and-dx-tips)'s monorepo tutorial
+
+## Motivation
+
+## Features
+- OpenAPI integraion
+- API integration
+- Turborepo
+- Tsconfig fix
+- [ ] Single dotenv config 
+- [ ] Deploy to Railway
+- [ ] JSON query params for front and back https://ts-rest.com/docs/next#json-query-parameters 
+- [x] Update all packages
+- [x] Clerk integrations
+- [ ] Github actions CI/CD
+- [x] refactor Next to FSD filesystem
+- [x] refactor Nest
+- [ ] Multi-handler?
 ## For future release
-- [ ] Multiple domains for ClerK? https://clerk.com/docs/advanced-usage/satellite-domains
-- [ ] For future release: megarepo?
+- [x] Multiple domains for ClerK? https://clerk.com/docs/advanced-usage/satellite-domains
 - [ ] NestJS Clerk middleware
 
 

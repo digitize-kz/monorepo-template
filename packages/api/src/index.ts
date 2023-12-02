@@ -2,3 +2,6 @@
 import { contract as c } from "./contract";
 
 export const contract = c;
+export default {
+  contract: contract,
+};
