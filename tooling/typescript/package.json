@@ -1,0 +1,15 @@
+{
+  "name": "@taskbounty-app/tsconfig",
+  "private": true,
+  "version": "0.1.0",
+  "files": [
+    "base.json"
+  ],
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@taskbounty-app/eslint-config/base"
+    ]
+  },
+  "prettier": "@taskbounty-app/prettier-config"
+}

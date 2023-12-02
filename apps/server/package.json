@@ -1,0 +1,104 @@
+{
+  "name": "@taskbounty-app/server",
+  "version": "0.1.0",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "studio": "drizzle-kit studio",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "dependencies": {
+    "@clerk/clerk-sdk-node": "^4.12.22",
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/config": "^3.1.1",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
+    "@nestjs/swagger": "^7.1.16",
+    "@paralleldrive/cuid2": "^2.2.2",
+    "@planetscale/database": "^1.11.0",
+    "@t3-oss/env-core": "^0.7.1",
+    "@ts-rest/core": "^3.30.5",
+    "@ts-rest/nest": "^3.30.5",
+    "@ts-rest/open-api": "^3.30.5",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.3.1",
+    "drizzle-kit": "^0.20.6",
+    "drizzle-orm": "^0.28.6",
+    "mysql2": "^3.6.5",
+    "@taskbounty-app/db": "workspace:^0.1.0",
+    "@taskbounty-app/api": "workspace:^0.1.0",
+    "@taskbounty-app/env": "workspace:^0.1.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "tsc-alias": "^1.8.8",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.0.0",
+    "@nestjs/schematics": "^10.0.0",
+    "@nestjs/testing": "^10.0.0",
+    "@taskbounty-app/eslint-config": "workspace:^0.1.0",
+    "@taskbounty-app/prettier-config": "workspace:^0.1.0",
+    "@taskbounty-app/tsconfig": "workspace:^0.1.0",
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.2",
+    "@types/node": "20.10.0",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.5.0",
+    "prettier": "^3.1.0",
+    "source-map-support": "^0.5.21",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.4.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.2",
+    "drizzle-kit": "^0.20.6"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@taskbounty-app/eslint-config/base",
+      "@taskbounty-app/eslint-config/nest"
+    ]
+  },
+  "prettier": "@taskbounty-app/prettier-config",
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/$1"
+  }
+}

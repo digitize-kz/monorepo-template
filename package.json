@@ -1,0 +1,36 @@
+{
+  "name": "taskbounty-app",
+  "version": "0.1.0",
+  "description": "",
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "packageManager": "pnpm@8.10.5",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "postinstall": "pnpm lint:ws",
+    "db:push": "pnpm -F db push",
+    "db:studio": "pnpm -F db studio",
+    "dev": "turbo dev --parallel",
+    "format": "turbo format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
+    "format:fix": "turbo format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:ws": "pnpm dlx sherif@latest",
+    "typecheck": "turbo typecheck",
+    "ui:add": "pnpm --filter ui ui:add"
+  },
+  "devDependencies": {
+    "@taskbounty-app/prettier-config": "workspace:^0.1.0",
+    "@turbo/gen": "^1.10.16",
+    "turbo": "^1.10.16"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "prettier": "@acme/prettier-config"
+}

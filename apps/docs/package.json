@@ -1,0 +1,50 @@
+{
+  "name": "@taskbounty-app/docs",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "scripts": {
+    "dev": "next -p 3001",
+    "build": "next build",
+    "lint": "dotenv -v SKIP_ENV_VALIDATION=1 next lint",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "clean": "git clean -xdf .next .turbo node_modules",
+    "typecheck": "tsc --noEmit",
+    "start": "next start -p 3001"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^14.0.3",
+    "nextra": "^2.13.2",
+    "nextra-theme-docs": "^2.13.2",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@taskbounty-app/tsconfig": "workspace:^0.1.0",
+    "@taskbounty-app/ui": "workspace:^0.1.0",
+    "@taskbounty-app/eslint-config": "workspace:^0.1.0",
+    "@taskbounty-app/prettier-config": "workspace:^0.1.0",
+    "@taskbounty-app/tailwind-config": "workspace:^0.1.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/node": "20.10.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.5",
+    "eslint": "^8.53.0",
+    "eslint-config-next": "14.0.3",
+    "prettier": "^3.1.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@taskbounty-app/eslint-config/base",
+      "@taskbounty-app/eslint-config/nextjs",
+      "@taskbounty-app/eslint-config/react"
+    ]
+  },
+  "prettier": "@taskbounty-app/prettier-config"
+}

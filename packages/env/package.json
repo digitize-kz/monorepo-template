@@ -1,0 +1,81 @@
+{
+  "name": "@taskbounty-app/env",
+  "version": "0.1.0",
+  "description": "typesafe env of taskbounty",
+  "main": "dist/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "clean": "tsc --build --clean",
+    "format": "prettier --check '**/*.{json,y?(a)ml,md}'",
+    "format:fix": "pnpm run format --write",
+    "lint": "eslint --ignore-path .gitignore --ext mjs,js,ts .",
+    "lint:fix": "pnpm run lint --fix"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitize-kz/monorepo-template.git"
+  },
+  "funding": "https://github.com/indicozy",
+  "keywords": [
+    "db"
+  ],
+  "author": "Burkit Karlibay",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@taskbounty-app/eslint-config": "workspace:^0.1.0",
+    "@taskbounty-app/prettier-config": "workspace:^0.1.0",
+    "@taskbounty-app/tsconfig": "workspace:^0.1.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.1.0"
+  },
+  "files": [
+    "dist",
+    "!**/fixtures",
+    "!**/*.spec.js",
+    "!**/*.spec.d.ts"
+  ],
+  "lint-staged": {
+    "*.?(m){js,ts}": "eslint --fix",
+    "*.{json,y?(a)ml,md}": "prettier --write"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@taskbounty-app/eslint-config/base"
+    ]
+  },
+  "prettier": "@taskbounty-app/prettier-config",
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/$1"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "extends": "@taskbounty-app/tsconfig/next.json", // Extend the config options from the root
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.setup.js"],
+  "exclude": ["node_modules"]
+}

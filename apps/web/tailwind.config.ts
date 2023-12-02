@@ -1,0 +1,1 @@
+module.exports = require('@taskbounty-app/ui/tailwind.config');
