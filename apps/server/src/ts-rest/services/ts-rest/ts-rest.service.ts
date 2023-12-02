@@ -1,15 +1,15 @@
 import * as db from "@/global/providers/db/db";
 import { Inject, Injectable } from "@nestjs/common";
 
-import { schema } from "@taskbounty-app/db";
+import { posts } from "@taskbounty-app/db";
 import { env } from "@taskbounty-app/env";
 
 @Injectable()
 export class TsRestService {
   constructor(@Inject(db.DB) private readonly db: db.DbType) {}
 
-  async getAll(): Promise<(typeof schema.posts.$inferSelect)[]> {
-    const result = await this.db.select().from(schema.posts);
+  async getAll(): Promise<(typeof posts.$inferSelect)[]> {
+    const result = await this.db.select().from(posts);
 
     return result;
   }

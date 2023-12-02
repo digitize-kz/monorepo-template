@@ -6,8 +6,6 @@ import { DefaultLogger, LogWriter } from "drizzle-orm";
 import { drizzle, MySql2Database } from "drizzle-orm/mysql2";
 import * as mysql from "mysql2/promise";
 
-import file from "@taskbounty-app/db";
-
 export const DB = Symbol("DB_SERVICE");
 export type DbType = MySql2Database;
 
@@ -41,7 +39,6 @@ export const DbProvider: FactoryProvider = {
 
     return drizzle(connection, {
       logger: new DefaultLogger({ writer: new CustomDbLogWriter() }),
-      schema: file.schema,
     });
   },
 };
